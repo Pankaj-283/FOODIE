@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FOODIE— Restaurants</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+     <link rel="website icon" type="png" href="./images/Weblogo.png">
+
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span>FOODIE</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html">Restaurants</a>
+      <a href="cart.html">Cart</a>
+      <button class="btn btn-ghost" id="openSignIn"><a href="signup.html">Sign In</a></button>
+      <button class="burger" id="burger" aria-label="Open Menu">☰</button>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Choose your favorite restaurant....</h1>
+
+  </section>
+
+      <section class="grid restaurants" id="restaurantGrid">
+    <article class="restaurant-card" data-name="Pizza Palace" data-cuisine="Italian" onclick="window.location.href='menu.html'">
+      <img src="images/FilmyFood.jpg" alt="Pizza Palace">
+      <div class="card-body">
+        <h3>Filmy Food</h3>
+        <p>Italian • ⭐ 4.5 • 30–40 mins</p>
+        <p><strong>Location:</strong> Downtown Plaza, Bhubaneswar</p>
+        <p><strong>Hours:</strong> 11 AM – 11 PM</p>
+        <p><strong>Delivery:</strong> Free delivery on orders above ₹500</p>
+      </div>
+    </article>
+
+
+    <article class="restaurant-card" data-name="Burger Hub" data-cuisine="American" onclick="window.location.href='menu.html'">
+      <img src="images/Subway.jpg" alt="Burger Hub">
+      <div class="card-body">
+        <h3>Subway</h3>
+        <p>American • ⭐ 4.2 • 25–35 mins</p>
+        <p><strong>Location:</strong> Market Street, Cuttack</p>
+        <p><strong>Hours:</strong> 10 AM – 10 PM</p>
+        <p><strong>Delivery:</strong> ₹50 delivery fee</p>
+      </div>
+    </article>
+
+        <article class="restaurant-card" data-name="Masala Magic" data-cuisine="Indian" onclick="window.location.href='menu.html'">
+      <img src="images/Foodies.jpg" alt="Masala Magic">
+      <div class="card-body">
+        <h3>Foodies Restaurants</h3>
+        <p>Indian • ⭐ 4.6 • 20–30 mins</p>
+        <p><strong>Location:</strong> Kamapali, Berhampur</p>
+
+        <p><strong>Hours:</strong> 12 PM – 10 PM</p>
+        <p><strong>Delivery:</strong> Free delivery</p>
+      </div>
+    </article>
+
+        <article class="restaurant-card" data-name="Sushi Zen" data-cuisine="Japanese" onclick="window.location.href='menu.html'">
+      <img src="images/TheCourtyard.jpg" alt="Sushi Zen">
+      <div class="card-body">
+        <h3>The Courtyard</h3>
+        <p>Japanese • ⭐ 4.8 • 35–45 mins</p>
+        <p><strong>Location:</strong> City Mall, Bhubaneswar</p>
+        <p><strong>Hours:</strong> 1 PM – 11 PM</p>
+        <p><strong>Delivery:</strong> Premium delivery ₹100</p>
+      </div>
+    </article>
+
+        <article class="restaurant-card" data-name="Sushi Zen" data-cuisine="Japanese" onclick="window.location.href='menu.html'">
+      <img src="images/goldentop.jpg" alt="Sushi Zen">
+      <div class="card-body">
+        <h3>Golden Spoon</h3>
+        <p>Japanese • ⭐ 4.8 • 35–45 mins</p>
+        <p><strong>Location:</strong> Buxi Bazaar, Cuttack</p>
+        <p><strong>Hours:</strong> 1 PM – 11 PM</p>
+        <p><strong>Delivery:</strong> Premium delivery ₹100</p>
+      </div>
+    </article>
+  </section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <!-- SVG Logo Example -->
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M14.31 8l5.74 9.94"></path>
+        <path d="M9.69 8h11.48"></path>
+        <path d="M7.38 12l5.74-9.94"></path>
+        <path d="M9.69 16L3.95 6.06"></path>
+        <path d="M14.31 16H2.83"></path>
+        <path d="M16.62 12l-5.74 9.94"></path>
+      </svg>
+      <span class="brand-name">FOODIE</span>
+      <p>Cravings Delivered with Love ❤️</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 FOODIE. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

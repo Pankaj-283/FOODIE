@@ -1,0 +1,25 @@
+/* Tablet */
+@media (max-width: 992px){
+  .hero{grid-template-columns:1fr; text-align:center}
+  .hero__art{height:240px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .cart-wrap{grid-template-columns:1fr}
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .navbar .nav a{display:none}
+  .burger{display:inline-block}
+  .services{grid-template-columns:1fr}
+  .hero__content h1{font-size:32px}
+  .cart-header, .cart-row, .cart-footer{
+    grid-template-columns:1fr 1fr; grid-template-areas:
+      "item item"
+      "qty price"
+      "action action";
+  }
+  .cart-row span:nth-child(1){grid-area:item}
+  .cart-row span:nth-child(2){grid-area:qty}
+  .cart-row span:nth-child(3){grid-area:price}
+  .cart-row span:nth-child(4){grid-area:action}
+}

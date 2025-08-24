@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOODIE - Sign Up</title>
+<link rel="stylesheet" href="signup.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+  <h2>Sign Up To FOODIE</h2>
+  <p>Create your account to get started</p>
+  <input type="text" placeholder="Full Name">
+  <input type="email" placeholder="Email Address">
+  <input type="password" placeholder="Password">
+  <button class="continue-btn">Continue</button>
+  <a onclick="goHome()">Back to Home</a>
+  
+
+  <div class="links">
+    <a href="login.html">Login</a>
+    <a href="#">Have a referral code?</a>
+  </div>
+  <div class="terms">
+    By signing up, you agree to our <strong>Terms & Privacy Policy</strong>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+  function goHome() {
+      window.location.replace("index.html"); // Prevents back navigation to this page
+    }
+
+</script>
+</body>
+</html>

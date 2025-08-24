@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FOODIE — Cart</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="website icon" type="png" href="./images/weblogo.png">
+
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span>FOODIE</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Back to menu</a>
+      <a href="cart.html">Cart</a>
+      <button class="btn btn-ghost" id="openSignIn"><a href="signup.html">Sign In</a></button>
+      <button class="burger" id="burger" aria-label="Open Menu">☰</button>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Your Cart</h1>
+    <p class="muted">Items stay saved locally until you clear them.</p>
+  </section>
+
+  <section class="cart-wrap">
+    <div class="cart-items">
+      <div class="cart-header">
+        <span>Item</span>
+        <span>Qty</span>
+        <span>Price</span>
+        <span>Action</span>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="total">Total: ₹<span id="cartTotal">0</span></div>
+        <button class="btn" id="clearCart">Clear Cart</button>
+      </div>
+    </div>
+
+    <form class="checkout" id="checkoutForm">
+      <h3>Checkout</h3>
+      <input class="input" type="text" id="name" placeholder="Full Name" required>
+      <input class="input" type="text" id="address" placeholder="Address" required>
+      <input class="input" type="tel" id="phone" placeholder="Phone" required>
+      <select class="input" id="payment" required>
+        <option value="">Payment Method</option>
+        <option>UPI</option>
+        <option>Card</option>
+        <option>Cash on Delivery</option>
+      </select>
+      <button type="submit" class="btn btn-full">Place Order</button>
+      <!-- <p class="muted">Demo flow only — no backend.</p> -->
+    </form>
+  </section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <!-- SVG Logo Example -->
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M14.31 8l5.74 9.94"></path>
+        <path d="M9.69 8h11.48"></path>
+        <path d="M7.38 12l5.74-9.94"></path>
+        <path d="M9.69 16L3.95 6.06"></path>
+        <path d="M14.31 16H2.83"></path>
+        <path d="M16.62 12l-5.74 9.94"></path>
+      </svg>
+      <span class="brand-name">FOODIE</span>
+      <p>Cravings Delivered with Love ❤️</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 FOODIE. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="cart.js"></script>
+  <!-- Add this inside <body> -->
+<div id="toast" class="toast">Action completed</div>
+</body>
+</html>

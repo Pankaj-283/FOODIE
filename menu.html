@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FOODIE — Menu</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+       <link rel="website icon" type="png" href="./images/Weblogo.png">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span>FOODIE</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="cart.html">Cart</a>
+      <button class="btn btn-ghost" id="openSignIn"><a href="signup.html">Sign In</a></button>
+      <button class="burger" id="burger" aria-label="Open Menu">☰</button>
+    </nav>
+  </header>
+
+
+
+  <section class="page-header">
+    <h1>What you want to eat...</h1>
+    <div class="filters">
+      <input type="text" id="searchRestaurant" class="input" placeholder="🔎 Search cuisine">
+      <select id="cuisineFilter" class="input">
+        <option value="">All Cuisines</option>
+        <option>Italian</option>
+        <option>American</option>
+        <option>Indian</option>
+        <option>Japanese</option>
+        <option>Mexican</option>
+        <option>Healthy</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="grid restaurants" id="restaurantGrid">
+    <article class="menu-item" data-cuisine="Italian" >
+      <img src="images/Pizza.jpg" alt="Margherita Pizza">
+      <div class="card-body">
+        <h3>Margherita Pizza</h3>
+        <p class="muted">Classic Italian pizza with tomatoes, mozzarella, and fresh basil.</p>
+        <div class="price-row">
+          <span class="price">₹199</span>
+          <button class="btn" onclick="addToCart('Margherita Pizza', 199)">Add</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="menu-item"  data-cuisine="Healthy" >
+      <img src="images/AvocadoToast.jpg" alt="Avocado Toast">
+      <div class="card-body">
+        <h3>Avocado Toast</h3>
+        <p class="muted">Toasted bread topped with smashed avocado, salt, and pepper.</p>
+        <div class="price-row">
+          <span class="price">₹329</span>
+          <button class="btn" onclick="addToCart('Avocado Toast', 329)">Add</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="menu-item"  data-cuisine="Japanese" >
+      <img src="images/Sushi.jpg" alt="Sushi">
+      <div class="card-body">
+        <h3>Sushi</h3>
+        <p class="muted">Rice rolls with fish & veggies.</p>
+        <div class="price-row">
+          <span class="price">₹249</span>
+          <button class="btn" onclick="addToCart('Sushi', 249)">Add</button>
+        </div>
+      </div>
+    </article>
+
+        <article class="menu-item"  data-cuisine="Mexican" >
+      <img src="images/Quesadilla.jpg" alt="Quesadilla">
+      <div class="card-body">
+        <h3>Quesadilla</h3>
+        <p class="muted">Grilled tortilla filled with cheese and veggies.</p>
+        <div class="price-row">
+          <span class="price">₹249</span>
+          <button class="btn" onclick="addToCart('Quesadilla', 249)">Add</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="menu-item"  data-cuisine="Indian" >
+      <img src="images/Vegetablebiryani.jpg" alt="Vegetable Biryani">
+      <div class="card-body">
+        <h3>Vegetable Biryani</h3>
+        <p class="muted">Aromatic basmati rice cooked with mixed vegetables, spices, and herbs.</p>
+        <div class="price-row">
+          <span class="price">₹99</span>
+          <button class="btn" onclick="addToCart('Vegetable Biryani', 99)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item"  data-cuisine="Italian" >
+      <img src="images/Bruschetta.jpg" alt="Bruschetta">
+      <div class="card-body">
+        <h3>Bruschetta</h3>
+        <p class="muted">Toasted bread topped with tomatoes, garlic & basil.</p>
+        <div class="price-row">
+          <span class="price">₹149</span>
+          <button class="btn" onclick="addToCart('Bruschetta', 149)">Add</button>
+        </div>
+      </div>
+    </article>
+
+        <article class="menu-item"  data-cuisine="American" >
+      <img src="images/CheeseBurger.jpg" alt="Cheese Burger">
+      <div class="card-body">
+        <h3>Cheese Burger</h3>
+        <p class="muted">Juicy chicken patty, cheddar cheese & lettuce.</p>
+        <div class="price-row">
+          <span class="price">₹99</span>
+          <button class="btn" onclick="addToCart('Cheese Burger', 99)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item"  data-cuisine="Mexican" >
+      <img src="images/ChickenTacos.jpg" alt="Chicken Tacos">
+      <div class="card-body">
+        <h3>Chicken Tacos</h3>
+        <p class="muted">Grilled chicken, lettuce & salsa.</p>
+        <div class="price-row">
+          <span class="price">₹269</span>
+          <button class="btn" onclick="addToCart('Chicken Tacos', 269)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item"  data-cuisine="Italian" >
+      <img src="images/Clubsandwich.jpg" alt="Club Sandwich">
+      <div class="card-body">
+        <h3>Club Sandwich</h3>
+        <p class="muted">Grilled chicken, bacon, lettuce & tomato.</p>
+        <div class="price-row">
+          <span class="price">₹49</span>
+          <button class="btn" onclick="addToCart('Club Sandwich', 49)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Dahi Pakhala" data-cuisine="Indian" >
+      <img src="images/DahiPakhala.jpg" alt="Dahi Pakhala">
+      <div class="card-body">
+        <h3>Dahi Pakhala</h3>
+        <p class="muted">Steamed rice mixed with curd, tempered with mustard seeds and curry leaves.</p>
+        <div class="price-row">
+          <span class="price">₹149</span>
+          <button class="btn" onclick="addToCart('Dahi Pakhala', 149)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Fettuccine Alfredo" data-cuisine="American" >
+      <img src="images/FettuccineAlfredo.jpg" alt="Fettuccine Alfredo">
+      <div class="card-body">
+        <h3>Fettuccine Alfredo</h3>
+        <p class="muted">Creamy fettuccine pasta with parmesan cheese.</p>
+        <div class="price-row">
+          <span class="price">₹149</span>
+          <button class="btn" onclick="addToCart('Fettuccine Alfredo', 149)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="FruitSalad" data-cuisine="Healthy" >
+      <img src="images/Fruitsalad.jpg" alt="Fruit Salad">
+      <div class="card-body">
+        <h3>Fruit Salad</h3>
+        <p class="muted">A mix of seasonal fruits.</p>
+        <div class="price-row">
+          <span class="price">₹149</span>
+          <button class="btn" onclick="addToCart('Fruit Salad', 149)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Quesadilla" data-cuisine="American" >
+      <img src="images/Mac&Cheese.jpg" alt="Mac & Cheese">
+      <div class="card-body">
+        <h3>Mac & Cheese</h3>
+        <p class="muted">Creamy macaroni pasta with cheese sauce .</p>
+        <div class="price-row">
+          <span class="price">₹299</span>
+          <button class="btn" onclick="addToCart('Mac & Cheese', 299)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Pizza Palace" data-cuisine="Mexican" >
+      <img src="images/NachoswithSalsa.jpg" alt="Nachos with Salsa">
+      <div class="card-body">
+        <h3>Nachos with Salsa</h3>
+        <p class="muted">Crispy nachos served with fresh salsa.</p>
+        <div class="price-row">
+          <span class="price">₹199</span>
+          <button class="btn" onclick="addToCart('Nachos with Salsa', 199)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Salmon" data-cuisine="Japanese" >
+      <img src="images/salmon.jpg" alt="Salmon">
+      <div class="card-body">
+        <h3>Salmon</h3>
+        <p class="muted">Grilled salmon served with lemon butter sauce.</p>
+        <div class="price-row">
+          <span class="price">₹499</span>
+          <button class="btn" onclick="addToCart('Salmon', 499)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Paneer Tikka" data-cuisine="Indian" >
+      <img src="images/PaneerTikka.jpg" alt="Paneer Tikka">
+      <div class="card-body">
+        <h3>Paneer Tikka</h3>
+        <p class="muted">Grilled paneer marinated in spices.</p>
+        <div class="price-row">
+          <span class="price">₹99</span>
+          <button class="btn" onclick="addToCart('Paneer Tikka', 99)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="QuinoaSalad" data-cuisine="Healthy" >
+      <img src="images/QuinoaSalad.jpg" alt="Quinoa Salad">
+      <div class="card-body">
+        <h3>Quinoa Salad</h3>
+        <p class="muted">Healthy quinoa salad with mixed vegetables.</p>
+        <div class="price-row">
+          <span class="price">₹239</span>
+          <button class="btn" onclick="addToCart('Quinoa Salad', 239)">Add</button>
+        </div>
+      </div>
+    </article>
+
+      <article class="menu-item" data-name="Ramen" data-cuisine="Japanese" >
+      <img src="images/Ramen.jpg" alt="Ramen">
+      <div class="card-body">
+        <h3>Ramen</h3>
+        <p class="muted">Delicious ramen noodles in a savory broth.</p>
+        <div class="price-row">
+          <span class="price">₹199</span>
+          <button class="btn" onclick="addToCart('Ramen', 199)">Add</button>
+        </div>
+      </div>
+    </article>
+
+
+  </section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <!-- SVG Logo Example -->
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M14.31 8l5.74 9.94"></path>
+        <path d="M9.69 8h11.48"></path>
+        <path d="M7.38 12l5.74-9.94"></path>
+        <path d="M9.69 16L3.95 6.06"></path>
+        <path d="M14.31 16H2.83"></path>
+        <path d="M16.62 12l-5.74 9.94"></path>
+      </svg>
+      <span class="brand-name">FOODIE</span>
+      <p>Cravings Delivered with Love ❤️</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 FOODIE. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
